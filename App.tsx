@@ -71,7 +71,7 @@ const App: React.FC = () => {
       <div className="w-full max-w-[800px] flex justify-between items-end mb-2 sm:mb-4 font-mono px-4 sm:px-0 pt-2 sm:pt-0 shrink-0">
         <div className="flex-1">
           <h1 className="text-xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 truncate">
-            GEMINI STARFIGHTER
+             *STARFIGHTER*
           </h1>
           <p className="text-slate-400 text-xs sm:text-sm mt-1 h-6 truncate max-w-[200px] sm:max-w-none">{flavorText}</p>
         </div>
