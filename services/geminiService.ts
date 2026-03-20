@@ -1,7 +1,8 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { WaveConfig } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const API_KEY = process.env.GEMINI_API_KEY || '';
+const ai = API_KEY ? new GoogleGenAI({ apiKey: API_KEY }) : null;
 
 const modelName = 'gemini-3-flash-preview';
 
@@ -14,6 +15,10 @@ export const fallbackWave: WaveConfig = {
 };
 
 export const generateWave = async (level: number, playerPerformance: string): Promise<WaveConfig> => {
+  if (!ai) {
+    console.warn("Gemini API key not found. Using fallback wave.");
+    return fallbackWave;
+  }
   try {
     const response = await ai.models.generateContent({
       model: modelName,

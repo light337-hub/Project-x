@@ -250,8 +250,8 @@ const App: React.FC = () => {
       </div>
 
       <div className="mt-4 sm:mt-8 text-slate-600 text-[10px] sm:text-xs text-center font-mono max-w-lg px-4 shrink-0 uppercase tracking-widest">
-        <p>Powered by Google Gemini AI</p>
-        <p>Procedural Tactical Analysis: Sector {level}</p>
+        <p>Created by SK_Prabhakar</p>
+      
       </div>
     </div>
   );
